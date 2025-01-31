@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: TODODB
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: Password!2025
+    ports:
+      - "5432:5432"
+    volumes:
+      - ../../dump/create-schema-postgresql.sql:/docker-entrypoint-initdb.d/init.sql
+      - ../../dump/insert-data-postgresql.sql:/docker-entrypoint-initdb.d/insert-scripts.sql
