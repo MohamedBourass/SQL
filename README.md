@@ -27,4 +27,3 @@ Now you can connect to the database by providing the credentials which is availa
 ## Execute queries
 
 TODO
-
